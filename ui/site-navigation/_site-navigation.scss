@@ -1,0 +1,252 @@
+/* admin bar adjustments */
+.admin-bar {
+
+	.site-navigation {
+    
+    @include mobile {
+      ul.primary-menu {
+        top: 109px;
+      }
+    }
+	}
+}
+
+/* hamburger menu button */
+@include mobile {
+
+	.nav-mobile {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: $nav-background;
+		height: $nav-height;
+		width: $nav-height;
+		transition: background-color 85ms ease-in;
+
+		&.active {
+			background: #333;
+
+			.nav-toggle {
+				span,
+				span:before,
+				span:after {
+					background: #fff;
+				}
+			}
+		}
+
+		.nav-toggle {
+			position: absolute;
+			left: 18px;
+			top: 18px;
+			cursor: pointer;
+			padding: 10px 35px 16px 0px;
+
+			span,
+			span:before,
+			span:after {
+				cursor: pointer;
+				border-radius: 1px;
+				height: 5px;
+				width: 35px;
+				background: $nav-color;
+				position: absolute;
+				display: block;
+				content: '';
+				transition: all 300ms ease-in-out;
+			}
+			span:before {
+				top: -10px;
+			}
+			span:after {
+				bottom: -10px;
+			}
+			&.active span {
+				background-color: transparent;
+
+				&:before,
+				&:after {
+					top: 0;
+				}
+				&:before {
+					transform: rotate(45deg);
+				}
+				&:after {
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+}
+
+/* global nav menu styles */
+ul.primary-menu {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+
+	li {
+
+		&.current-menu-item a,
+		&.current-menu-parent a {
+			background: $nav-mobile-hover-background;
+			color: $nav-mobile-hover-color;
+		}
+
+		/* show submenus */
+		.has-sub-menu[aria-expanded="true"] {
+			&+ul.sub-menu {
+				transition: opacity 85ms linear;
+				display: block;
+				opacity: 1;
+				height: auto;
+			}
+			&.level-1+ul.sub-menu {
+				position: static;
+			}
+		}
+
+		/* hide submenus */
+		.has-sub-menu[aria-expanded="false"] {
+			&+ul.sub-menu {
+				display: none;
+				opacity: 0;
+				height: 0;
+			}
+		}
+
+		a:hover,
+		&.current-menu-item [aria-expanded="true"],
+		&.current-menu-parent [aria-expanded="true"],
+		[aria-expanded="true"] {
+			background: $nav-mobile-open-background;
+			color: $nav-mobile-open-color;
+		}
+
+		a {
+      display: flex;
+      line-height: 2.75rem;
+      align-items: center;
+      justify-content: flex-start;
+			padding: 0 1rem;
+			background: $nav-mobile-background;
+			color: $nav-mobile-color;
+			text-decoration: none;
+			transition: all 85ms ease-in;
+
+			&.has-sub-menu:after {
+				padding-left: 1rem;
+				content: ' \25BE';
+			}
+		}
+
+		/* level-1 */
+		ul {
+
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			li {
+
+				a {
+					padding: 0.75rem 1rem;
+          line-height: 1;
+          height: auto;
+          display: block;
+          padding: 1rem 1rem;
+				}
+
+				/* level-2 */
+				ul {
+
+					li {
+
+						a {
+							padding-left: 2rem;
+              display: block;
+              height: auto;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* toggle for .primary-menu using js */
+@include mobile {
+	.site-navigation {
+
+    .primary-menu {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 40px;
+      z-index: 500;
+      height: calc( 100vh - 46px);
+      background: #333;
+
+      &.active {
+        display: block;
+
+        ul {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+/* nav menu styles for table in portrait mode and larger */
+@include tablet-up {
+	.site-navigation {
+		flex-grow: 1;
+
+		ul.primary-menu {
+			display: flex;
+			justify-content: flex-start;
+			width: 100%;
+
+			li {
+
+				a {
+					background: $nav-background;
+          color: $nav-color;
+          height: 6rem;
+				}
+
+				&.current-menu-item a,
+				&.current-menu-parent a {
+					background: $nav-hover-background;
+					color: $nav-hover-color;
+				}
+
+				a:hover,
+				&.current-menu-item [aria-expanded="true"],
+				&.current-menu-parent [aria-expanded="true"],
+				[aria-expanded="true"] {
+					background: $nav-open-background;
+					color: $nav-open-color;
+				}
+
+				ul {
+					position: absolute;
+					z-index: 1;
+					box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+
+					li {
+						min-width: 190px;
+            background: #fff;
+
+            a {
+              height: auto;
+            }
+					}
+				}
+			}
+		}
+	}
+}

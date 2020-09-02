@@ -1,0 +1,71 @@
+$base-font-size: 1rem;
+$base-line-height: $base-font-size * 1.5;
+
+$type-scale: (
+  -1: 0.752rem, // small text
+  0:  1.000rem,  // body text
+  1:  1.33rem,  // h3
+	2:  1.769rem,  // h2
+	3:  2.353rem	// h1
+);
+
+$line-heights: (
+  -1: $base-line-height,
+  0: $base-line-height,
+  1: $base-line-height * 2,
+	2: $base-line-height * 3,
+	3: $base-line-height * 3
+);
+
+@function type-scale($level) {
+  @return map-get($type-scale, $level);
+}
+
+@function line-height($level) {
+  @return map-get($line-heights, $level);
+}
+
+@mixin type-setting($level: 0) {
+  font-size: type-scale($level);
+  line-height: line-height($level);
+}
+
+/* typography */
+body {
+	font-family: "Lato", sans-serif;
+}
+
+/* headings */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+h1 {
+	@include type-setting(3);
+}
+h2 {
+	@include type-setting(2);
+}
+h3,
+h4,
+h5,
+h6 {
+	@include type-setting(1);
+}
+
+/* body elements */
+p,
+ul,
+ol,
+tr {
+	@include type-setting(0);
+}
+
+/* links */
+a {
+	color: #279dff;
+	transition: color 85ms ease-in;
+
+	&:hover {
+		color: darken(#279dff, 10%);
+	}
+}

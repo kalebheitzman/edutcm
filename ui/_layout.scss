@@ -1,0 +1,195 @@
+@import './variables';
+@import './media';
+
+/* html, body */
+html,
+body {
+	background: #333;
+}
+
+/* admin related */
+.post-edit-link,
+.comment-edit-link {
+	background: #efefef;
+	color: #888;
+	border-radius: 5px;
+	padding: 0.5rem 1rem;
+	margin-top: 1rem;
+	text-decoration: none;
+	display: inline-block;
+	transition: all 85ms ease-in;
+
+	&:hover {
+		background: #ddd;
+		color: #444;
+	}
+}
+
+/* .site-layout */
+.site-wrapper {
+	background: #fff;
+}
+
+/* .site-content */
+.site-content {
+
+}
+
+/* .site-main elements */
+.site-main {
+  padding: 0 0 1rem;
+
+	@include tablet-up {
+    padding: 0 0 2rem;
+  }
+  
+  @include tablet-side {
+    padding: 0 0 4rem;
+  }
+}
+
+/* post and page layouts */
+.page-template,
+.single-post,
+.blog {
+
+	.site-content-wrapper {
+
+  }
+}
+
+.page-template-default,
+.post-template-default,
+.blog {
+
+	.site-content-wrapper {
+
+  }
+}
+
+/* full width template */
+.full-width {
+  display: grid;
+
+  @include tablet-up {
+    margin: 0 auto;
+    width: $content-tablet-up;
+  }
+
+  @include tablet-side {
+    width: $content-tablet-side;
+  }
+  
+  @include desktop {
+    width: $content-desktop;
+  }
+}
+
+/* sidebar layouts */
+.sidebar-wrapper {
+  display: grid;
+
+  @include tablet-up {
+    margin: 0 auto;
+    width: $content-tablet-up;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 2rem;
+  }
+
+  @include tablet-side {
+    width: $content-tablet-side;
+  }
+  
+  @include desktop {
+    width: $content-desktop;
+  }
+}
+
+.page-template-page-left-sidebar {
+
+	.sidebar-wrapper {
+
+    @include tablet-up {
+      grid-template-columns: 1fr 3fr;
+
+      .site-content {
+        grid-row: 1;
+        grid-column: 2;
+      }
+
+      .secondary {
+        grid-row: 1;
+        grid-column: 1;
+      }
+    }
+	}
+}
+
+.page-template-page-right-sidebar,
+.single-post,
+.blog {
+
+	.site-content-wrapper {
+    
+    main {
+      display: grid;
+    }
+	}
+}
+
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+	word-wrap: normal !important;
+
+	&:focus {
+		background-color: #eee;
+		clip: auto !important;
+		clip-path: none;
+		color: #444;
+		display: block;
+		font-size: 1em;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000; /* Above WP toolbar. */
+	}
+}
+
+.skip-link {
+	background-color: #f1f1f1;
+	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+	color: #21759b;
+	display: block;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	left: -9999em;
+	outline: none;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	text-transform: none;
+	top: -9999em;
+
+	&:focus {
+		clip: auto;
+		height: auto;
+		left: 6px;
+		top: 7px;
+		width: auto;
+		z-index: 100000;
+	}
+}

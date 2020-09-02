@@ -1,0 +1,27 @@
+/* site colophon */
+.site-colophon.widget-area {
+	background: #efefef;
+	color: #333;
+	padding: 1rem;
+
+	& > ul {
+		display: grid;
+    grid-template-columns: 1fr;
+    
+    @include tablet-up {
+      margin: 0 auto;
+      width: $content-tablet-up;
+      grid-template-columns: 1fr 1fr 1fr;
+			grid-column-gap: 2rem;
+    }
+  
+    @include tablet-side {
+      width: $content-tablet-side;
+      grid-column-gap: 4rem;
+    }
+    
+    @include desktop {
+      width: $content-desktop;
+    }
+	}
+}

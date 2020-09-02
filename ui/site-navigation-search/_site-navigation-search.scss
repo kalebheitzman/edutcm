@@ -1,0 +1,24 @@
+/* all screens */
+.site-navigation-search {
+  display: flex;
+  align-items: center;
+
+  button {
+    display: inline-block;
+    border-radius: 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    color: #333;
+    cursor: pointer;
+    background: #efefef;
+
+    &[data-show-search="true"] {
+      background: #1474b4;
+      color: #fff;
+		}
+  }
+}

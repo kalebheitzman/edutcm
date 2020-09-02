@@ -1,0 +1,52 @@
+$background: #222;
+$background-hover: #555;
+$color: #777;
+
+@include tablet-side {
+	.social-menu {
+
+	}
+}
+
+/** social menu */
+.social-menu {
+  margin-block-start: 0.65rem;
+  margin-block-end: 1rem;
+
+  @include tablet-up {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+	ul.social-menu-links {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li.social-icon {
+			margin: 0 0.25rem;
+			display: inline-block;
+			text-align: center;
+
+			a {
+				display: block;
+				width: 2.5rem;
+				height: 2.5rem;
+				line-height: 2.5rem;
+				color: $color;
+				border-radius: 2.5rem;
+				text-decoration: none;
+        transition: background-color 85ms ease-in;
+        font-size: 1.5rem;
+
+				&:hover {
+					color: #ccc;
+				}
+
+				i {
+					font-style: normal;
+				}
+			}
+		}
+	}
+}

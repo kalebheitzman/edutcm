@@ -1,0 +1,53 @@
+.site-navigation-search-box {
+  background: #1474b4;
+  padding: 2rem;
+  color: #fff;
+  box-sizing: border-box;
+  transition: ease-in-out 350ms all;
+  z-index: 400;
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: $hero-mobile-height;
+
+  @include tablet-up {
+    height: $hero-tablet-up-height;
+
+  }
+
+  @include tablet-side {
+    height: $hero-tablet-side-height;
+  }
+
+  @include desktop {
+    height: $hero-desktop-height;
+  }
+  
+  &[data-show-search="true"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content {
+
+    @include tablet-up {
+
+      margin: 0 auto;
+    }
+
+    @include tablet-side {
+
+    }
+
+  }
+  
+  @include tablet-up {
+
+  }
+
+  @include tablet-side {
+
+  }
+}
+

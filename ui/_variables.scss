@@ -1,0 +1,37 @@
+/* branding mixins */
+
+/* text colors */
+$text-color: #222;
+$link-color: #00b6f7;
+
+/* header vars */
+$header-line-height-tablet: 6rem;
+$header-line-height-desktop: 6rem;
+
+/* nav vars */
+$nav-height: 4rem;
+$nav-background: #fff;
+$nav-hover-background: #f7f7f7;
+$nav-color: #333;
+$nav-hover-color: #111;
+$nav-open-background: #f7f7f7;
+$nav-open-color: #222;
+
+/* mobile nav vars */
+$nav-mobile-background: #333;
+$nav-mobile-hover-background: #444;
+$nav-mobile-color: #ccc;
+$nav-mobile-hover-color: #eee;
+$nav-mobile-open-background: #714779;
+$nav-mobile-open-color: #eee;
+
+/* content widths */
+$content-tablet-up: 720px;
+$content-tablet-side: 960px;
+$content-desktop: 1120px;
+
+/* hero vars */
+$hero-mobile-height: 60vh;
+$hero-tablet-up-height: 60vh;
+$hero-tablet-side-height: 60vh;
+$hero-desktop-height: 69vh;

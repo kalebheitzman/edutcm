@@ -86,7 +86,7 @@
     .breadcrumbs {
       color: #fff;
 
-      a {
+      a.home {
         background: rgba(255,255,255,0.35);
         color: #fff;
         text-decoration: none;
@@ -94,10 +94,21 @@
         padding: 0.25rem 0.75rem;
         border-radius: 3px;
         transition: all 85ms ease-in-out;
+        margin-right: 1rem;
 
         &:hover {
           background: rgba(255,255,255,1);
           color: #333;
+        }
+      }
+
+      a.breadcrumb {
+        color: #fff;
+        text-decoration: none;
+        transition: all 85ms ease-in-out;
+
+        &:hover {
+          text-decoration: underline;
         }
       }
     }

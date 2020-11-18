@@ -1116,17 +1116,24 @@ a img.aligncenter {
           font-size: 3rem; } }
     .hero .outer .breadcrumbs {
       color: #fff; }
-      .hero .outer .breadcrumbs a {
+      .hero .outer .breadcrumbs a.home {
         background: rgba(255, 255, 255, 0.35);
         color: #fff;
         text-decoration: none;
         display: inline-block;
         padding: 0.25rem 0.75rem;
         border-radius: 3px;
-        transition: all 85ms ease-in-out; }
-        .hero .outer .breadcrumbs a:hover {
+        transition: all 85ms ease-in-out;
+        margin-right: 1rem; }
+        .hero .outer .breadcrumbs a.home:hover {
           background: white;
           color: #333; }
+      .hero .outer .breadcrumbs a.breadcrumb {
+        color: #fff;
+        text-decoration: none;
+        transition: all 85ms ease-in-out; }
+        .hero .outer .breadcrumbs a.breadcrumb:hover {
+          text-decoration: underline; }
 
 /* animations */
 @keyframes fadeIn {
@@ -1134,6 +1141,26 @@ a img.aligncenter {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+.page-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem 0;
+  background: #f7f7f7;
+  border-radius: 4px; }
+  .page-menu ul li.current-menu-item a {
+    border-right: 2px solid #aaa; }
+  .page-menu ul li a {
+    padding: 0.25rem 1rem;
+    text-decoration: none;
+    display: block;
+    transition: all 85ms ease-out; }
+    .page-menu ul li a:hover, .page-menu ul li a:focus {
+      border-right: 2px solid #ccc; }
+  .page-menu ul li ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
 
 /* page css */
 .page .post-thumbnail img {

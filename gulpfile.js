@@ -35,5 +35,14 @@ gulp.task('sass-editor', function () {
 // watch sass
 gulp.task('default', function() {
 	livereload.listen();
-	gulp.watch('./ui/**/*.scss', gulp.series('sass', 'sass-editor'));
+  gulp.watch('./ui/**/*.scss', gulp.series('sass', 'sass-editor'));
+  gulp.watch('./ui/**/*.js').on('change', function(file) {
+    livereload.changed(file)
+  })
+  gulp.watch('./ui/**/*.php').on('change', function(file) {
+    livereload.changed(file)
+  })
+  gulp.watch('./**/*.php').on('change', function(file) {
+    livereload.changed(file)
+  })
 });

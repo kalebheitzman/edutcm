@@ -11,6 +11,11 @@
 $template_directory = get_template_directory();
 
 /**
+ * Add admin tweaks.
+ */
+require $template_directory . '/inc/admin-tweaks.php';
+
+/**
  * Get Component Function that this theme is primarily built on.
  */
 require $template_directory . '/inc/get-component.php';

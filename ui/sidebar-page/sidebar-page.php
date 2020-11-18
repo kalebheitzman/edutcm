@@ -8,13 +8,14 @@
  * @since 1.0.0
  */
 
-if ( ! is_active_sidebar( 'page-sidebar' ) ) {
-	return;
-}
 ?>
 
-<aside class="secondary widget-area">
-	<ul>
-		<?php dynamic_sidebar( 'page-sidebar' ); ?>
-	</ul>
+<aside class="secondary widget-area sidebar-page">
+	<?php get_component( 'page-menu' ); ?>
+
+	<?php if ( is_active_sidebar( 'post-sidebar' ) ) : ?>
+		<ul>
+			<?php dynamic_sidebar( 'page-sidebar' ); ?>
+		</ul>
+	<?php endif; ?>
 </aside><!-- #secondary -->

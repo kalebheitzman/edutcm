@@ -160,30 +160,49 @@ if ( ! function_exists( 'components_entry_footer' ) ) :
 endif;
 
 if ( ! function_exists( 'components_breadcrumbs' ) ) :
-  /**
-   * Componets Breadcrumbs
-   * 
-   * @return void
-   */
-  function components_breadcrumbs() {
-    echo '<a href="'.home_url().'" rel="nofollow">' . __( 'Home', 'components' ) . '</a>';
-    if (is_category() || is_single()) {
-      echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
-      the_category(' &bull; ');
-        if (is_single()) {
-          echo " &nbsp;&nbsp;&#187;&nbsp;&nbsp; ";
-          the_title();
-        }
-    } elseif (is_page()) {
-      echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
-      echo the_title();
-    } elseif (is_search()) {
-      echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;Search Results for... ";
-      echo '"<em>';
-      echo the_search_query();
-      echo '</em>"';
-    }
-  }
+	/**
+	 * Componets Breadcrumbs
+	 *
+	 * @return void
+	 */
+	function components_breadcrumbs() {
+		global $post;
+		echo '<a href="' . home_url() . '" rel="nofollow" class="home">' . __( 'Home', 'components' ) . '</a>';
+		if ( is_category() || is_single() ) {
+			echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
+			the_category( ' &bull; ' );
+			if ( is_single() ) {
+				echo ' &nbsp;&nbsp;&#187;&nbsp;&nbsp; ';
+				the_title();
+			}
+		} elseif ( is_page() ) {
+			echo components_breadcrumbs_pages( $post );
+		} elseif ( is_search() ) {
+			echo '&nbsp;&nbsp;&#187;&nbsp;&nbsp;Search Results for... ';
+			echo '"<em>';
+			echo the_search_query();
+			echo '</em>"';
+		}
+	}
+endif;
+
+if ( ! function_exists( 'components_breadcrumbs_pages' ) ) :
+	/**
+	 * Components Breadcrumb Page Builder
+	 *
+	 * @param object $post WordPress Post Object.
+	 */
+	function components_breadcrumbs_pages( $post ) {
+		$output = '';
+
+		if ( $post->post_parent ) {
+			$parent  = get_post( $post->post_parent );
+			$output .= components_breadcrumbs_pages( $parent ) . ' / ';
+		}
+		$output .= '<a href="' . get_permalink( $post ) . '" class="breadcrumb">' . $post->post_title . '</a>';
+
+		return $output;
+	}
 endif;
 
 if ( ! function_exists( 'components_post_thumbnail' ) ) :

@@ -7,6 +7,8 @@
  * @package Components
  */
 
+remove_action( 'template_redirect', 'wp_old_slug_redirect' );
+
 // define template directory var to avoid calling function multiple times.
 $template_directory = get_template_directory();
 

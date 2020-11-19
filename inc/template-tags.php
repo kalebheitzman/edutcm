@@ -6,6 +6,37 @@
  * @since 1.0.0
  */
 
+if ( ! function_exists( 'component_hero_image' ) ) :
+	/**
+	 * Get Post Thumbnail
+	 *
+	 * @return void
+	 */
+	function component_hero_image() {
+		$post_thumbnail_id = get_post_thumbnail_id();
+
+		if ( has_post_thumbnail() ) {
+			the_post_thumbnail(
+				'hero',
+				array(
+					'loading' => 'lazy',
+				)
+			);
+		} else {
+			global $post;
+			if ( $post->post_parent ) {
+				echo get_the_post_thumbnail(
+					$post->post_parent,
+					'hero',
+					array(
+						'loading' => 'lazy',
+					)
+				);
+			}
+		}
+	}
+endif;
+
 if ( ! function_exists( 'component_content_class' ) ) :
 	/**
 	 * Component Content Class

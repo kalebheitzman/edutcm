@@ -45,7 +45,7 @@ function tcm_faq_post_type() {
 		'description'         => __( 'Frequently Asked Questions', 'tcm' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'thumbnail', 'revisions', 'custom-fields' ),
-		'taxonomies'          => array( 'category', 'post_tag' ),
+		'taxonomies'          => array(),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,
@@ -58,7 +58,7 @@ function tcm_faq_post_type() {
 		'has_archive'         => true,
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
-		'capability_type'     => 'post',
+		'capability_type'     => 'page',
 		'show_in_rest'        => true,
 	);
 	register_post_type( 'faq', $args );

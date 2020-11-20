@@ -17,11 +17,12 @@
 function register_components_nav_menus() {
 	register_nav_menus(
 		array(
-      'primary_menu'   => esc_html__( 'Primary Menu', '_s' ),
-      'secondary_menu' => esc_html__( 'Secondary Menu', '_s' ),
+			'primary_menu'   => esc_html__( 'Primary Menu', '_s' ),
+			'secondary_menu' => esc_html__( 'Secondary Menu', '_s' ),
 			'footer_menu'    => esc_html__( 'Footer Menu', '_s' ),
-      'social_menu'    => esc_html__( 'Social Menu', '_s' ),
-      'sidebar_menu'    => esc_html__( 'Sidebar Menu', '_s' ), 
+			'social_menu'    => esc_html__( 'Social Menu', '_s' ),
+			'sidebar_menu'   => esc_html__( 'Sidebar Menu', '_s' ),
+			'faq_menu'       => esc_html__( 'FAQ Menu', '_s' ),
 		)
 	);
 }

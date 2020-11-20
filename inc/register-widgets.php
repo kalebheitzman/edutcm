@@ -68,7 +68,6 @@ function components_register_page_sidebar() {
 }
 add_action( 'widgets_init', 'components_register_page_sidebar' );
 
-
 /**
  * Register Colophon Sidebar
  *

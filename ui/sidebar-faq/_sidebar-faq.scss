@@ -1,0 +1,38 @@
+.page-menu {
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0.25rem 0;
+    background: #f7f7f7;
+    border-radius: 4px;
+
+    li {
+
+      &.current-menu-item {
+        
+        a {
+          border-right: 2px solid #aaa;
+        }
+      }
+
+      a {
+        padding: 0.25rem 1rem;
+        text-decoration: none;
+        display: block;
+        transition: all 85ms ease-out;
+
+        &:hover,
+        &:focus {
+          border-right: 2px solid #ccc;
+        }
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}

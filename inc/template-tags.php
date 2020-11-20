@@ -198,13 +198,15 @@ if ( ! function_exists( 'components_breadcrumbs' ) ) :
 	function components_breadcrumbs() {
 		global $post;
 		echo '<a href="' . home_url() . '" rel="nofollow" class="home">' . __( 'Home', 'components' ) . '</a>';
-		if ( is_category() || is_single() ) {
-			echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
-			the_category( ' &bull; ' );
-			if ( is_single() ) {
-				echo ' &nbsp;&nbsp;&#187;&nbsp;&nbsp; ';
-				the_title();
-			}
+		if (is_category()) {
+				echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
+				the_category(' &bull; ');
+				if (is_single()) {
+						echo ' &nbsp;&nbsp;&#187;&nbsp;&nbsp; ';
+						the_title();
+				}
+		} elseif ( is_single() ) {
+			echo components_breadcrumbs_pages( $post );
 		} elseif ( is_page() ) {
 			echo components_breadcrumbs_pages( $post );
 		} elseif ( is_search() ) {

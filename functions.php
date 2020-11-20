@@ -28,6 +28,11 @@ require $template_directory . '/inc/post-types/faq.php';
 require $template_directory . '/inc/get-component.php';
 
 /**
+ * Get Blocks.
+ */
+require $template_directory . '/inc/blocks.php';
+
+/**
  * Add theme support.
  */
 require $template_directory . '/inc/theme-support.php';

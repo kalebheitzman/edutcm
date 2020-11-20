@@ -19,10 +19,10 @@
 				'walker'         => new Components_Menu_Walker(),
 			)
 		);
-    ?>
-    
-  <div class="nav-mobile">
+		?>
+
+	<div class="nav-mobile">
 		<a class="nav-toggle" href="#!"><span></span></a>
-  </div>
-  
+	</div>
+
 </nav>

@@ -18,6 +18,11 @@ $template_directory = get_template_directory();
 require $template_directory . '/inc/admin-tweaks.php';
 
 /**
+ * Regsiter custom post types.
+ */
+require $template_directory . '/inc/post-types/faq.php';
+
+/**
  * Get Component Function that this theme is primarily built on.
  */
 require $template_directory . '/inc/get-component.php';

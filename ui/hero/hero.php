@@ -6,14 +6,28 @@
  * @since 1.0.0
  */
 
+global $post;
+$ctas = get_field( 'call_to_actions', $post->ID );
+
 ?><div class="hero">
 
 	<?php component_hero_image(); ?>
 
 	<div class="outer">
 		<div class="inner">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			<p class="breadcrumbs"><?php components_breadcrumbs(); ?></p>
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+			<?php if ( $ctas ) : ?>
+				<div class="hero-ctas">
+					<?php
+					foreach ( $ctas as $cta ) :
+						get_component( 'hero', 'cta', array( 'cta' => $cta ) );
+					endforeach;
+					?>
+				</div>
+			<?php endif; ?>
+
 		</div><!--.innter-->
 	</div><!--.wrapper-->
 

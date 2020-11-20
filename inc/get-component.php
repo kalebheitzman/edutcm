@@ -21,7 +21,7 @@
  * @param String $partial Name of partial.
  * @since 1.0.0
  */
-function get_component( $component = null, $partial = null ) {
+function get_component( $component = null, $partial = null, $args = null ) {
 	if ( null === $component ) {
 		return;
 	}
@@ -38,8 +38,11 @@ function get_component( $component = null, $partial = null ) {
 
 	// load the php template file.
 	if ( file_exists( $component_php_path ) ) {
+		if ( $args ) {
+			compact( 'args', $args );
+		}
 		// load the component.
-		include_once $component_php_path;
+		include $component_php_path;
 	} else {
 		// fail silently.
 		return;

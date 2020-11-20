@@ -13,7 +13,6 @@ if ( ! function_exists( 'component_hero_image' ) ) :
 	 * @return void
 	 */
 	function component_hero_image() {
-		$post_thumbnail_id = get_post_thumbnail_id();
 
 		if ( has_post_thumbnail() ) {
 			the_post_thumbnail(

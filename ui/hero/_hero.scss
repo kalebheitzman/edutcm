@@ -45,8 +45,9 @@
   .outer {
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.25);
-    position: absolute;
+		background: rgb(17,72,120);
+		background: linear-gradient(55deg, rgba(17,72,120,0.8) 0%, rgba(0,0,0,0) 100%);    
+		position: absolute;
     top: 0;
     display: flex;
     justify-content: flex-start;
@@ -76,7 +77,8 @@
       font-size: 4rem;
       font-weight: 600;
       text-transform: uppercase;
-      margin: 0;
+			margin: 0;
+			padding: 0 0 1rem;
 
       @include mobile {
         font-size: 3rem;
@@ -84,10 +86,11 @@
     }
 
     .breadcrumbs {
-      color: #fff;
+			color: #fff;
+			margin: 0;
 
       a.home {
-        background: rgba(255,255,255,0.35);
+        background: rgba(255,255,255,0.25);
         color: #fff;
         text-decoration: none;
         display: inline-block;
@@ -110,6 +113,23 @@
         &:hover {
           text-decoration: underline;
         }
+      }
+    }
+
+    .hero-ctas {
+			display: flex;
+			justify-content: flex-start;
+
+      .hero-cta {
+				display: inline-block;
+				color: #fff;
+				text-decoration: none;
+				//background: rgba(255,255,255,0.35);
+        padding: 0.5rem 1rem;
+        margin-right: 1rem;
+				border-radius: 4px;
+				border: 1px solid #fff;
+				font-size: 1.25rem;
       }
     }
   }

@@ -17,6 +17,13 @@
 class Components_Menu_Walker extends Walker_Nav_Menu {
 
 	/**
+	 * Counter
+	 *
+	 * @var counter Item Counter.
+	 */
+	private $counter;
+
+	/**
 	 * Start Element
 	 *
 	 * @param  string $output Output of menu item.
@@ -61,4 +68,5 @@ class Components_Menu_Walker extends Walker_Nav_Menu {
 		}
 
 	}
+
 }

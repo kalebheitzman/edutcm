@@ -85,7 +85,7 @@ ul.primary-menu {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
+  overflow: hidden;
 
 	li {
 
@@ -216,7 +216,25 @@ ul.primary-menu {
 					background: $nav-background;
           color: $nav-color;
           height: 6rem;
-				}
+
+        }
+        
+        &.nav-button {
+
+          a,
+          &.current-menu-item a {
+            background: $primary;
+            height: 2rem;
+            margin: 2rem;
+            color: $primary-text;
+            border-radius: 4px;
+
+            &:hover {
+              background: $primary-hover;
+              color: #fff;
+            }
+          }
+        }
 
 				&.current-menu-item a,
 				&.current-menu-parent a {

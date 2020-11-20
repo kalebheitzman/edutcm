@@ -28,6 +28,7 @@ import site branding
 */
 /* branding mixins */
 /* text colors */
+/* branding colors */
 /* header vars */
 /* nav vars */
 /* mobile nav vars */
@@ -489,6 +490,7 @@ import layout
 */
 /* branding mixins */
 /* text colors */
+/* branding colors */
 /* header vars */
 /* nav vars */
 /* mobile nav vars */
@@ -638,6 +640,7 @@ import vairious site components
 */
 /* branding mixins */
 /* text colors */
+/* branding colors */
 /* header vars */
 /* nav vars */
 /* mobile nav vars */
@@ -828,6 +831,7 @@ a {
 
 /* branding mixins */
 /* text colors */
+/* branding colors */
 /* header vars */
 /* nav vars */
 /* mobile nav vars */
@@ -1085,7 +1089,8 @@ a img.aligncenter {
   .hero .outer {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.25);
+    background: #114878;
+    background: linear-gradient(55deg, rgba(17, 72, 120, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
     position: absolute;
     top: 0;
     display: flex;
@@ -1110,14 +1115,16 @@ a img.aligncenter {
       font-size: 4rem;
       font-weight: 600;
       text-transform: uppercase;
-      margin: 0; }
+      margin: 0;
+      padding: 0 0 1rem; }
       @media (max-width: 599px) {
         .hero .outer h1 {
           font-size: 3rem; } }
     .hero .outer .breadcrumbs {
-      color: #fff; }
+      color: #fff;
+      margin: 0; }
       .hero .outer .breadcrumbs a.home {
-        background: rgba(255, 255, 255, 0.35);
+        background: rgba(255, 255, 255, 0.25);
         color: #fff;
         text-decoration: none;
         display: inline-block;
@@ -1134,6 +1141,18 @@ a img.aligncenter {
         transition: all 85ms ease-in-out; }
         .hero .outer .breadcrumbs a.breadcrumb:hover {
           text-decoration: underline; }
+    .hero .outer .hero-ctas {
+      display: flex;
+      justify-content: flex-start; }
+      .hero .outer .hero-ctas .hero-cta {
+        display: inline-block;
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        margin-right: 1rem;
+        border-radius: 4px;
+        border: 1px solid #fff;
+        font-size: 1.25rem; }
 
 /* animations */
 @keyframes fadeIn {
@@ -1608,6 +1627,17 @@ ul.primary-menu {
         background: #fff;
         color: #333;
         height: 6rem; }
+      .site-navigation ul.primary-menu li.nav-button a,
+      .site-navigation ul.primary-menu li.nav-button.current-menu-item a {
+        background: #114878;
+        height: 2rem;
+        margin: 2rem;
+        color: #fff;
+        border-radius: 4px; }
+        .site-navigation ul.primary-menu li.nav-button a:hover,
+        .site-navigation ul.primary-menu li.nav-button.current-menu-item a:hover {
+          background: #145996;
+          color: #fff; }
       .site-navigation ul.primary-menu li.current-menu-item a,
       .site-navigation ul.primary-menu li.current-menu-parent a {
         background: #f7f7f7;

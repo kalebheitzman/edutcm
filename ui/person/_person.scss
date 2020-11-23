@@ -8,7 +8,7 @@
   border-radius: 4px;
 }
 
-.section-faculty {
+.section-people {
 
   display: grid;
 
@@ -23,15 +23,31 @@
     box-sizing: border-box;
     border-radius: 4px;
 
+    .person-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .person-bubble {
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        background: #eee;
+        margin-bottom: 1rem;
+      }
+    }
+
     .person-name {
       margin: 0;
       padding: 0;
       widows: 3;
       orphans: 3;
+      text-align: center;
     }
 
     .person-title {
       font-weight: bold;
+      text-align: center;
       margin: 0;
       padding: 0;
       widows: 3;

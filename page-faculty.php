@@ -24,7 +24,7 @@ $loop = new WP_Query( $faculty_args );
 
 	<?php get_component( 'hero' ); ?>
 
-	<section class="site-content full-width section-faculty">
+	<section class="site-content full-width section-people">
 
 		<div class="people-description">
 			<h2>Faculty</h2>

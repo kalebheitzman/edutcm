@@ -1124,41 +1124,6 @@ a img.aligncenter {
 .page-links {
   clear: both; }
 
-.people-description {
-  background: #114878;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  border-radius: 4px; }
-
-.section-faculty {
-  display: grid; }
-  @media (min-width: 600px) {
-    .section-faculty {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 2rem; } }
-  .section-faculty .type-person {
-    background: #f7f7f7;
-    padding: 2rem;
-    box-sizing: border-box;
-    border-radius: 4px; }
-    .section-faculty .type-person .person-name {
-      margin: 0;
-      padding: 0;
-      widows: 3;
-      orphans: 3; }
-    .section-faculty .type-person .person-title {
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      widows: 3;
-      orphans: 3; }
-    .section-faculty .type-person .person-biography {
-      widows: 3;
-      orphans: 3; }
-
 /* hero banner */
 .hero {
   width: 100%;
@@ -1293,6 +1258,53 @@ a img.aligncenter {
   display: block;
   max-width: 100%;
   height: auto; }
+
+.people-description {
+  background: #114878;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 4px; }
+
+.section-people {
+  display: grid; }
+  @media (min-width: 600px) {
+    .section-people {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 2rem; } }
+  .section-people .type-person {
+    background: #f7f7f7;
+    padding: 2rem;
+    box-sizing: border-box;
+    border-radius: 4px; }
+    .section-people .type-person .person-image {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .section-people .type-person .person-image .person-bubble {
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        background: #eee;
+        margin-bottom: 1rem; }
+    .section-people .type-person .person-name {
+      margin: 0;
+      padding: 0;
+      widows: 3;
+      orphans: 3;
+      text-align: center; }
+    .section-people .type-person .person-title {
+      font-weight: bold;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      widows: 3;
+      orphans: 3; }
+    .section-people .type-person .person-biography {
+      widows: 3;
+      orphans: 3; }
 
 /* post css */
 .post.sticky {

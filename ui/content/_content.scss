@@ -86,11 +86,6 @@ a img.aligncenter {
 
 /* Components CSS for Entry Content */
 .entry-content {
-  margin-top: 2rem;
-
-  @include tablet-up {
-    margin-top: 4rem;
-  }
 
 	blockquote {
 		border-left: 0 solid #efefef;

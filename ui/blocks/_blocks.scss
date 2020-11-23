@@ -18,3 +18,25 @@ CSS For Gutenberg Blocks
 		width: 920px;
   }
 }
+
+/* columns */
+@include tablet-up {
+  
+  .wp-block-column:not(:first-child) {
+    margin-left: 0;
+  }
+}
+
+/* generic hero display */
+.hero-display {
+
+  @include tablet-up {
+    margin-top: -4rem;
+    z-index: 10000;
+    position: relative;
+  }
+}
+
+.collapse {
+  margin-bottom: 0;
+}

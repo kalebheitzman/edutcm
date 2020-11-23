@@ -844,7 +844,40 @@ a {
 /* content widths */
 /* hero vars */
 .block-grid-item {
-  padding: 2rem; }
+  height: 100%;
+  box-sizing: border-box;
+  position: relative; }
+  .block-grid-item .inner {
+    padding: 2rem;
+    position: relative;
+    z-index: 10; }
+  .block-grid-item .background-overlay {
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 30%; }
+  .block-grid-item h3 {
+    margin-block-start: 0;
+    margin-block-end: 0; }
+  .block-grid-item .grid-item-button {
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0 0;
+    transition: all 85ms ease-out; }
+    .block-grid-item .grid-item-button:hover {
+      background: rgba(255, 255, 255, 0.1); }
+
+.wp-block-lazyblock-grid-item {
+  height: 100%; }
 
 /*
 CSS For Gutenberg Blocks
@@ -862,6 +895,21 @@ CSS For Gutenberg Blocks
     margin: 1.5rem calc( ( 767px - 920px ) / 2);
     max-width: 920px;
     width: 920px; } }
+
+/* columns */
+@media (min-width: 600px) {
+  .wp-block-column:not(:first-child) {
+    margin-left: 0; } }
+
+/* generic hero display */
+@media (min-width: 600px) {
+  .hero-display {
+    margin-top: -4rem;
+    z-index: 10000;
+    position: relative; } }
+
+.collapse {
+  margin-bottom: 0; }
 
 /* comment css */
 .comments-area {
@@ -1001,59 +1049,65 @@ a img.aligncenter {
   padding: 0 4px 0; }
 
 /* Components CSS for Entry Content */
-.entry-content {
-  margin-top: 2rem; }
-  @media (min-width: 600px) {
-    .entry-content {
-      margin-top: 4rem; } }
-  .entry-content blockquote {
-    border-left: 0 solid #efefef;
-    margin: 0;
-    padding: 0 0 0 1rem; }
-  .entry-content cite {
-    font-style: italic; }
-  .entry-content table {
-    width: 100%;
-    border-collapse: collapse; }
-    .entry-content table tbody tr th {
-      background: #999;
-      color: #fff;
-      padding: 0 1rem;
-      font-weight: normal; }
-    .entry-content table tbody tr td {
-      padding: 0 1rem; }
-    .entry-content table tbody tr:nth-child(odd) {
-      background: #f7f7f7; }
-  .entry-content dl dt {
-    margin: 0; }
-  .entry-content dl dd {
-    margin: 0 0 0 2.5rem; }
-  .entry-content ul, .entry-content ol {
-    padding-left: 1.5rem; }
-  .entry-content address {
-    border-left: 0 solid #efefef;
-    margin: 0;
-    padding: 0 0 0 1rem; }
-  .entry-content abbr {
-    border-bottom: none;
-    text-decoration: underline dotted; }
-  .entry-content code {
-    font-family: monospace, monospace;
-    white-space: pre-wrap;
-    /* Since CSS 2.1 */
-    word-wrap: break-word;
-    /* Internet Explorer 5.5+ */ }
-  .entry-content hr {
-    border: 0;
-    border-bottom: 1px solid #ccc; }
-  .entry-content pre {
-    font-family: monospace, monospace;
-    white-space: pre-wrap;
-    /* Since CSS 2.1 */
-    word-wrap: break-word;
-    /* Internet Explorer 5.5+ */ }
-  .entry-content img {
-    max-width: 100%; }
+.entry-content blockquote {
+  border-left: 0 solid #efefef;
+  margin: 0;
+  padding: 0 0 0 1rem; }
+
+.entry-content cite {
+  font-style: italic; }
+
+.entry-content table {
+  width: 100%;
+  border-collapse: collapse; }
+  .entry-content table tbody tr th {
+    background: #999;
+    color: #fff;
+    padding: 0 1rem;
+    font-weight: normal; }
+  .entry-content table tbody tr td {
+    padding: 0 1rem; }
+  .entry-content table tbody tr:nth-child(odd) {
+    background: #f7f7f7; }
+
+.entry-content dl dt {
+  margin: 0; }
+
+.entry-content dl dd {
+  margin: 0 0 0 2.5rem; }
+
+.entry-content ul, .entry-content ol {
+  padding-left: 1.5rem; }
+
+.entry-content address {
+  border-left: 0 solid #efefef;
+  margin: 0;
+  padding: 0 0 0 1rem; }
+
+.entry-content abbr {
+  border-bottom: none;
+  text-decoration: underline dotted; }
+
+.entry-content code {
+  font-family: monospace, monospace;
+  white-space: pre-wrap;
+  /* Since CSS 2.1 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */ }
+
+.entry-content hr {
+  border: 0;
+  border-bottom: 1px solid #ccc; }
+
+.entry-content pre {
+  font-family: monospace, monospace;
+  white-space: pre-wrap;
+  /* Since CSS 2.1 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */ }
+
+.entry-content img {
+  max-width: 100%; }
 
 .entry-footer {
   clear: both; }

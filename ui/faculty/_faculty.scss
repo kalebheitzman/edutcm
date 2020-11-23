@@ -1,0 +1,46 @@
+.people-description {
+  background: $primary;
+  color: $primary-text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 4px;
+}
+
+.section-faculty {
+
+  display: grid;
+
+  @include tablet_up {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+  }
+
+  .type-person {
+    background: #f7f7f7;
+    padding: 2rem;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    .person-name {
+      margin: 0;
+      padding: 0;
+      widows: 3;
+      orphans: 3;
+    }
+
+    .person-title {
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      widows: 3;
+      orphans: 3;
+    }
+
+    .person-biography {
+      widows: 3;
+      orphans: 3;
+    }
+  }
+}

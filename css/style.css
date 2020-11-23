@@ -913,7 +913,7 @@ CSS For Gutenberg Blocks
 /* generic hero display */
 @media (min-width: 600px) {
   .hero-display {
-    margin-top: -4rem;
+    margin-top: -6rem;
     z-index: 10000;
     position: relative; } }
 
@@ -1124,11 +1124,47 @@ a img.aligncenter {
 .page-links {
   clear: both; }
 
+.people-description {
+  background: #114878;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 4px; }
+
+.section-faculty {
+  display: grid; }
+  @media (min-width: 600px) {
+    .section-faculty {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 2rem; } }
+  .section-faculty .type-person {
+    background: #f7f7f7;
+    padding: 2rem;
+    box-sizing: border-box;
+    border-radius: 4px; }
+    .section-faculty .type-person .person-name {
+      margin: 0;
+      padding: 0;
+      widows: 3;
+      orphans: 3; }
+    .section-faculty .type-person .person-title {
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      widows: 3;
+      orphans: 3; }
+    .section-faculty .type-person .person-biography {
+      widows: 3;
+      orphans: 3; }
+
 /* hero banner */
 .hero {
   width: 100%;
   background: #333;
-  position: relative; }
+  position: relative;
+  margin-bottom: 2rem; }
   @media (max-width: 599px) {
     .hero {
       height: 60vh; } }

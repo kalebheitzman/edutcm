@@ -21,6 +21,7 @@ require $template_directory . '/inc/admin-tweaks.php';
  * Regsiter custom post types.
  */
 require $template_directory . '/inc/post-types/faq.php';
+require $template_directory . '/inc/post-types/people.php';
 
 /**
  * Get Component Function that this theme is primarily built on.

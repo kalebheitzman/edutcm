@@ -31,7 +31,7 @@ CSS For Gutenberg Blocks
 .hero-display {
 
   @include tablet-up {
-    margin-top: -4rem;
+    margin-top: -6rem;
     z-index: 10000;
     position: relative;
   }

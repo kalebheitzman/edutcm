@@ -1,6 +1,6 @@
 <?php
 /**
- * Components Theme Page
+ * Template name: FAQ
  *
  * @package Components
  * @since 1.0.0
@@ -12,9 +12,9 @@ get_header(); ?>
 
 	<?php get_component( 'hero' ); ?>
 
-	<div class="no-sidebar-wrapper">
-		<section class="site-content full-width">
+	<section class="sidebar-wrapper">
 
+		<div class="site-content">
 			<?php
 			while ( have_posts() ) :
 				the_post();
@@ -27,8 +27,11 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 			?>
-		</section><!--.site-content-->
-		</div><!--.no-sidebar-wrapper-->
+		</div>
+
+		<?php get_component( 'sidebar-page' ); ?>
+
+	</section><!--.sidebar-wrapper-->
 
 </main><!--.site-main-->
 

@@ -32,11 +32,12 @@ body {
 
 /* .site-content */
 .site-content {
-  
+	
 }
 
 /* .site-main elements */
 .site-main {
+	background: #f7f7f7;
   padding: 0 0 1rem;
 
 	@include tablet-up {
@@ -85,15 +86,30 @@ body {
   }
 }
 
+/* wrappers */
+.sidebar-wrapper,
+.no-sidebar-wrapper {
+	position: relative;
+	z-index: 100;
+	
+	@include tablet_up {
+		margin-top: -8rem;
+		border-radius: 4px;
+	}
+}
+
 /* sidebar layouts */
 .sidebar-wrapper {
   display: grid;
 
   @include tablet-up {
-    margin: 0 auto;
+		margin: -6rem auto 0;
+		position: relative;
+		background: #fff;
     width: $content-tablet-up;
     grid-template-columns: 3fr 1fr;
-    grid-column-gap: 2rem;
+		grid-column-gap: 2rem;
+		padding: 0 2rem 2rem;
   }
 
   @include tablet-side {

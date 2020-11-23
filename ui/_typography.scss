@@ -62,10 +62,10 @@ tr {
 
 /* links */
 a {
-	color: #279dff;
+	color: $primary;
 	transition: color 85ms ease-in;
 
 	&:hover {
-		color: darken(#279dff, 10%);
+		color: darken($primary, 10%);
 	}
 }

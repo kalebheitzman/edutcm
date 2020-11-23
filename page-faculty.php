@@ -24,21 +24,19 @@ $loop = new WP_Query( $faculty_args );
 
 	<?php get_component( 'hero' ); ?>
 
-	<section class="site-content full-width section-people">
+	<div class="no-sidebar-wrapper">
+		<section class="site-content full-width section-people">
 
-		<div class="people-description">
-			<h2>Faculty</h2>
-		</div>
+			<?php
+			while ( $loop->have_posts() ) :
+				$loop->the_post();
+				get_component( 'content', 'content-person' );
+			endwhile;
 
-		<?php
-		while ( $loop->have_posts() ) :
-			$loop->the_post();
-			get_component( 'content', 'content-person' );
-		endwhile;
-
-		wp_reset_postdata();
-		?>
-	</section><!--.site-content-->
+			wp_reset_postdata();
+			?>
+		</section><!--.site-content-->
+	</div><!--.no-sidebar-wrapper-->
 
 </main><!--.site-main-->
 

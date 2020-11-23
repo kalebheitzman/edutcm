@@ -197,14 +197,14 @@ if ( ! function_exists( 'components_breadcrumbs' ) ) :
 	 */
 	function components_breadcrumbs() {
 		global $post;
-		echo '<a href="' . home_url() . '" rel="nofollow" class="home">' . __( 'Home', 'components' ) . '</a>';
-		if (is_category()) {
-				echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
-				the_category(' &bull; ');
-				if (is_single()) {
-						echo ' &nbsp;&nbsp;&#187;&nbsp;&nbsp; ';
-						the_title();
-				}
+		echo '<a href="' . esc_url( home_url() ) . '" rel="nofollow" class="home">' . __( 'Home', 'components' ) . '</a>';
+		if ( is_category() ) {
+			echo esc_attr( '&nbsp;&nbsp;&#187;&nbsp;&nbsp;' );
+			the_category( ' &bull; ' );
+			if ( is_single() ) {
+				echo ' &nbsp;&nbsp;&#187;&nbsp;&nbsp; ';
+				the_title();
+			}
 		} elseif ( is_single() ) {
 			echo components_breadcrumbs_pages( $post );
 		} elseif ( is_page() ) {
@@ -227,8 +227,13 @@ if ( ! function_exists( 'components_breadcrumbs_pages' ) ) :
 	function components_breadcrumbs_pages( $post ) {
 		$output = '';
 
+		if ( 'faq' === $post->post_type ) {
+			$post_type_obj = get_post_type_object( $post->post_type );
+			$output       .= $post_type_obj->labels->singular_name . ' &nbsp;/&nbsp; ';
+		}
+
 		if ( $post->post_parent ) {
-			$parent  = get_post( $post->post_parent );
+			$parent = get_post( $post->post_parent );
 			$output .= components_breadcrumbs_pages( $parent ) . ' / ';
 		}
 		$output .= '<a href="' . get_permalink( $post ) . '" class="breadcrumb">' . $post->post_title . '</a>';

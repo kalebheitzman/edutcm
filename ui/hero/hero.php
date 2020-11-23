@@ -7,6 +7,7 @@
  */
 
 global $post;
+
 $ctas = get_field( 'call_to_actions', $post->ID );
 
 ?><div class="hero">
@@ -16,7 +17,9 @@ $ctas = get_field( 'call_to_actions', $post->ID );
 	<div class="outer">
 		<div class="inner">
 			<p class="breadcrumbs"><?php components_breadcrumbs(); ?></p>
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<h1 class="entry-title">
+				<?php the_title(); ?>
+			</h1>
 
 			<?php if ( $ctas ) : ?>
 				<div class="hero-ctas">

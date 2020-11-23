@@ -2,9 +2,8 @@
 
   ul {
     list-style: none;
-    margin: 0;
-    padding: 0.25rem 0;
-    background: #f7f7f7;
+		margin: 0;
+		padding: 0;
     border-radius: 4px;
 
     li {
@@ -12,19 +11,26 @@
       &.current-menu-item {
         
         a {
-          border-right: 2px solid #aaa;
+					background: $primary;
+					color: $primary-text;
+
+					&:hover {
+						background: $primary-hover;
+					}
         }
       }
 
       a {
-        padding: 0.25rem 1rem;
+				padding: 0.25rem 0 0.25rem 0.5rem;
+				margin-left: -0.5rem;
         text-decoration: none;
         display: block;
-        transition: all 85ms ease-out;
+				transition: all 85ms ease-out;
+				border-radius: 4px;
 
         &:hover,
         &:focus {
-          border-right: 2px solid #ccc;
+					background: #f7f7f7;
         }
       }
 

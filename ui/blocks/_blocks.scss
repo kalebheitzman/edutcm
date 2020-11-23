@@ -20,23 +20,13 @@ CSS For Gutenberg Blocks
 }
 
 /* columns */
-@include tablet-up {
+// @include tablet-up {
   
-  .wp-block-column:not(:first-child) {
-    margin-left: 0;
-  }
-}
+//   .wp-block-column:not(:first-child) {
+//     margin-left: 0;
+//   }
+// }
 
-/* generic hero display */
-.hero-display {
-
-  @include tablet-up {
-    margin-top: -6rem;
-    z-index: 10000;
-    position: relative;
-  }
-}
-
-.collapse {
-  margin-bottom: 0;
+.uagb-column__inner-wrap {
+	padding: 0 !important;
 }

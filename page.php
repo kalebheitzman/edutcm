@@ -6,6 +6,15 @@
  * @since 1.0.0
  */
 
+global $post;
+
+$page_styles = get_field( 'page_styles', $post->ID );
+
+$page_classes = '';
+if ( $page_styles && in_array( 'no-padding', $page_styles, true ) ) {
+	$page_classes = 'no-padding';
+}
+
 get_header(); ?>
 
 <main class="site-main">
@@ -13,7 +22,7 @@ get_header(); ?>
 	<?php get_component( 'hero' ); ?>
 
 	<div class="no-sidebar-wrapper">
-		<section class="site-content full-width">
+		<section class="site-content full-width <?php echo esc_attr( $page_classes ); ?>">
 
 			<?php
 			while ( have_posts() ) :

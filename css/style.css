@@ -1180,7 +1180,7 @@ a img.aligncenter {
   transform: rotate(90deg) translateX(-3px); }
 
 .faqs-section .faq-collapsible .toggle:checked + .lbl-toggle + .collapsible-content {
-  max-height: 100vh; }
+  max-height: 100%; }
 
 /* hero banner */
 .hero {

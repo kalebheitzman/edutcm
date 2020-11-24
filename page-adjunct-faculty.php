@@ -1,6 +1,6 @@
 <?php
 /**
- * Template name: Faculty
+ * Template name: Adjunct Faculty
  *
  * @package Components
  * @since 1.0.0
@@ -8,7 +8,7 @@
 
 get_header();
 
-$faculty_args = array(
+$args = array(
 	'post_type'      => 'person',
 	'post_status'    => 'publish',
 	'posts_per_page' => -1,
@@ -19,12 +19,12 @@ $faculty_args = array(
 		array(
 			'taxonomy' => 'person_category',
 			'field'    => 'slug',
-			'terms'    => 'faculty',
+			'terms'    => 'adjunct-faculty',
 		),
 	),
 );
 
-$loop = new WP_Query( $faculty_args );
+$loop = new WP_Query( $args );
 
 ?>
 

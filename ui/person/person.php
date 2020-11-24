@@ -14,7 +14,10 @@
 	</div>
 </div>
 
-<h3 class="person-name"><?php the_title(); ?></h3>
+<h3 class="person-name">
+	<?php echo esc_attr( get_field( 'person_first_name' ) ); ?>&nbsp;
+	<?php echo esc_attr( get_field( 'person_last_name' ) ); ?> 
+</h3>
 
 <p class="person-title"><?php echo esc_attr( get_field( 'person_title' ) ); ?></p>
 

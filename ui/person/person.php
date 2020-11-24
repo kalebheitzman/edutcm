@@ -6,11 +6,18 @@
  * @since 1.0.0
  */
 
+$headshot = get_field( 'person_headshot' );
+
 ?>
 
 <div class="person-image">
 	<div class="person-bubble">
-
+		<?php if ( $headshot ) : ?>
+			<img 
+				src="<?php echo esc_url( $headshot['sizes']['thumbnail'] ); ?>"
+				alt="<?php the_title(); ?>"
+			/>
+		<?php endif; ?>
 	</div>
 </div>
 

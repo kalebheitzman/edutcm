@@ -890,7 +890,9 @@ a {
 .block-grid-item {
   height: 100%;
   box-sizing: border-box;
-  position: relative; }
+  position: relative;
+  margin-bottom: 1rem;
+  border-radius: 4px; }
   .block-grid-item .inner {
     padding: 2rem;
     position: relative;
@@ -929,8 +931,10 @@ a {
     .block-grid-item .grid-item-button:hover {
       background: rgba(255, 255, 255, 0.1); }
 
-.wp-block-lazyblock-grid-item {
+.grow .wp-block-lazyblock-grid-item {
   height: 100%; }
+  .grow .wp-block-lazyblock-grid-item .block-grid-item {
+    border-radius: 0; }
 
 /*
 CSS For Gutenberg Blocks
@@ -1326,6 +1330,10 @@ a img.aligncenter {
         border-radius: 100px;
         background: #eee;
         margin-bottom: 1rem; }
+        .section-people .type-person .person-image .person-bubble img {
+          width: 100px;
+          height: 100px;
+          border-radius: 100px; }
     .section-people .type-person .person-name {
       margin: 0;
       padding: 0;

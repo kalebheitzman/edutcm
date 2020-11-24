@@ -1,7 +1,9 @@
 .block-grid-item {
   height: 100%;
   box-sizing: border-box;
-  position: relative;
+	position: relative;
+	margin-bottom: 1rem;
+	border-radius: 4px;
 
   .inner {
     padding: 2rem;
@@ -51,6 +53,13 @@
   }
 }
 
-.wp-block-lazyblock-grid-item {
-  height: 100%;
+.grow {
+
+	.wp-block-lazyblock-grid-item {
+		height: 100%;
+
+		.block-grid-item {
+			border-radius: 0;
+		}
+	}
 }

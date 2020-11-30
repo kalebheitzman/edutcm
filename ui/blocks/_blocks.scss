@@ -69,3 +69,17 @@ CSS For Gutenberg Blocks
 		}
 	}
 }
+
+/**
+ * Lazy block grid item
+ */
+.wp-block-lazyblock-grid-item {
+
+	+ .wp-block-lazyblock-grid-item {
+		margin-top: 1rem;
+
+		@include tablet-up {
+			margin-top: 2rem;
+		}
+	}
+}

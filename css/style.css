@@ -957,6 +957,18 @@ CSS For Gutenberg Blocks
 .uagb-column__inner-wrap {
   padding: 0 !important; }
 
+/**
+ * Accordion Block
+ */
+.wp-block-coblocks-accordion-item {
+  margin: 0 0 0.5rem; }
+  .wp-block-coblocks-accordion-item summary {
+    background: #eee;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    outline: 0;
+    cursor: pointer; }
+
 /* comment css */
 .comments-area {
   clear: both;

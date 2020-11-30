@@ -45,3 +45,39 @@ CSS For Gutenberg Blocks
 		cursor: pointer;
 	}
 }
+
+/**
+ * Post Grid
+ */
+.uagb-post__items {
+
+	article {
+
+		.uagb-post__inner-wrap {
+			border-radius: 4px;
+
+			h3 {
+				line-height: 1.1;
+			}
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+
+			.uagb-post__cta {
+				background: $primary;
+				border-radius: 4px;
+				transition: all 85ms ease-out;
+				
+				a {
+					font-weight: normal;
+				}
+
+				&:hover {
+					background: $primary-hover;
+				}
+			}
+		}
+	}
+}

@@ -1,6 +1,6 @@
 <?php
 /**
- * Catalogs
+ * Handbooks
  *
  * @package Components
  * @since 1.0.0
@@ -12,27 +12,27 @@ $sitepress->switch_lang( $args['language'] );
 
 // query args.
 $args = array(
-	'post_type'      => 'catalog',
+	'post_type'      => 'handbook',
 	'post_status'    => 'publish',
 	'posts_per_page' => -1,
-	'orderby'        => 'post_date',
-	'order'          => 'DESC',
+	'orderby'        => 'title',
+	'order'          => 'ASC',
 );
 
 // get WordPress loop.
 $loop = new WP_Query( $args );
 
-?><div class="catalogs-wrapper">
+?><div class="handbooks-wrapper">
 
-	<ul class="catalogs">
+	<ul class="handbooks">
 		<?php
 		while ( $loop->have_posts() ) :
 			$loop->the_post();
-			get_component( 'catalogs', 'catalog' );
+			get_component( 'handbooks', 'handbook' );
 		endwhile;
 
 		wp_reset_postdata();
 		?>
-	</ul><!--.catalogs-->
+	</ul><!--.handbooks-->
 
-</div><!--.catalogs-wrapper-->
+</div><!--.handbooks-wrapper-->

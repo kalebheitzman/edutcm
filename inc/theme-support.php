@@ -46,7 +46,14 @@ if ( ! function_exists( 'components_setup' ) ) :
       1920,
       0,
       true
-    );
+		);
+		
+		add_image_size(
+			'article-image',
+			500,
+			281,
+			true,
+		);
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments

@@ -33,6 +33,7 @@ require $template_directory . '/inc/taxonomies/person-category.php';
  * Register shortcodes.
  */
 require $template_directory . '/inc/shortcodes/catalogs.php';
+require $template_directory . '/inc/shortcodes/handbooks.php';
 
 /**
  * Get Component Function that this theme is primarily built on.

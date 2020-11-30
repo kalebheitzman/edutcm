@@ -996,37 +996,6 @@ CSS For Gutenberg Blocks
     .wp-block-lazyblock-grid-item + .wp-block-lazyblock-grid-item {
       margin-top: 2rem; } }
 
-.catalogs-wrapper ul.catalogs {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem; }
-  @media (min-width: 600px) {
-    .catalogs-wrapper ul.catalogs {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 3rem; } }
-  .catalogs-wrapper ul.catalogs li {
-    display: block;
-    background: #eee;
-    border-radius: 4px; }
-    .catalogs-wrapper ul.catalogs li a {
-      overflow: hidden;
-      padding: 1rem;
-      text-decoration: none;
-      display: block;
-      text-align: center; }
-      .catalogs-wrapper ul.catalogs li a img {
-        width: 100%;
-        height: auto;
-        border-radius: 4px;
-        margin: 0;
-        padding: 0; }
-      .catalogs-wrapper ul.catalogs li a p {
-        margin: 0;
-        padding: 0; }
-
 /* comment css */
 .comments-area {
   clear: both;
@@ -1511,6 +1480,37 @@ a img.aligncenter {
 .post.sticky {
   padding: 0 2rem 2rem;
   background: #f7f7f7; }
+
+.resources-wrapper ul.resources {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem; }
+  @media (min-width: 600px) {
+    .resources-wrapper ul.resources {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 3rem; } }
+  .resources-wrapper ul.resources li {
+    display: block;
+    background: #eee;
+    border-radius: 4px; }
+    .resources-wrapper ul.resources li a {
+      overflow: hidden;
+      padding: 1rem;
+      text-decoration: none;
+      display: block;
+      text-align: center; }
+      .resources-wrapper ul.resources li a img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        margin: 0;
+        padding: 0; }
+      .resources-wrapper ul.resources li a p {
+        margin: 0;
+        padding: 0; }
 
 /* Main Sidebar */
 /* pager sidebar */

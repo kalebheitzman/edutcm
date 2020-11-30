@@ -20,20 +20,19 @@ require $template_directory . '/inc/admin-tweaks.php';
 /**
  * Register custom post types.
  */
-require $template_directory . '/inc/post-types/catalogs.php';
-require $template_directory . '/inc/post-types/handbooks.php';
 require $template_directory . '/inc/post-types/people.php';
+require $template_directory . '/inc/post-types/resources.php';
 
 /**
  * Register custom taxonomies.
  */
 require $template_directory . '/inc/taxonomies/person-category.php';
+require $template_directory . '/inc/taxonomies/resource-category.php';
 
 /**
  * Register shortcodes.
  */
-require $template_directory . '/inc/shortcodes/catalogs.php';
-require $template_directory . '/inc/shortcodes/handbooks.php';
+require $template_directory . '/inc/shortcodes/resources.php';
 
 /**
  * Get Component Function that this theme is primarily built on.

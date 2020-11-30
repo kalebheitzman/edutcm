@@ -11,28 +11,33 @@
 get_header();
 ?>
 
-	<div class="content-area">
-		<main class="site-main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+<main class="site-main">
 
-			get_template_part( 'ui/content/content', get_post_type() );
+	<?php get_component( 'hero' ); ?>
 
-			the_post_navigation();
+	<section class="sidebar-wrapper">
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+		<div class="site-content">
+			<?php
+			while ( have_posts() ) :
+				the_post();
+				get_component( 'content', 'content' );
 
-		endwhile; // End of the loop.
-		?>
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+			endwhile; // End of the loop.
+			?>
+		</div>
+
+		<?php get_component( 'sidebar-post' ); ?>
+
+	</section><!--.sidebar-wrapper-->
+
+</main><!--.site-main-->
 
 <?php
-get_component( 'sidebar-post' );
 get_footer();

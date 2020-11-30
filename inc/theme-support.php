@@ -38,16 +38,16 @@ if ( ! function_exists( 'components_setup' ) ) :
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
-    add_theme_support( 'post-thumbnails' );
-    
-    // hero image
-    add_image_size(
-      'hero',
-      1920,
-      0,
-      true
+		add_theme_support( 'post-thumbnails' );
+
+		// hero image.
+		add_image_size(
+			'hero',
+			1920,
+			0,
+			true
 		);
-		
+
 		add_image_size(
 			'article-image',
 			500,
@@ -95,13 +95,13 @@ if ( ! function_exists( 'components_setup' ) ) :
 				'flex-width'  => true,
 				'flex-height' => true,
 			)
-    );
-    
-    /**
-     * Gutenberg Blocks Support
-     */
-    add_theme_support( 'editor-styles' );
-    add_theme_support( 'align-wide' );
+		);
+
+		/**
+		 * Gutenberg Blocks Support
+		 */
+		add_theme_support( 'editor-styles' );
+		add_theme_support( 'align-wide' );
 	}
 endif;
 add_action( 'after_setup_theme', 'components_setup' );

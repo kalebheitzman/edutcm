@@ -22,8 +22,8 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				components_posted_on();
-				components_posted_by();
+				the_date();
+				// components_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>

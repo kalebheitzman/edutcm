@@ -20,12 +20,19 @@ require $template_directory . '/inc/admin-tweaks.php';
 /**
  * Register custom post types.
  */
+require $template_directory . '/inc/post-types/catalogs.php';
+require $template_directory . '/inc/post-types/handbooks.php';
 require $template_directory . '/inc/post-types/people.php';
 
 /**
  * Register custom taxonomies.
  */
 require $template_directory . '/inc/taxonomies/person-category.php';
+
+/**
+ * Register shortcodes.
+ */
+require $template_directory . '/inc/shortcodes/catalogs.php';
 
 /**
  * Get Component Function that this theme is primarily built on.

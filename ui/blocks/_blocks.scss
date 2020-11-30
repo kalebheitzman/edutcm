@@ -19,18 +19,6 @@ CSS For Gutenberg Blocks
   }
 }
 
-/* columns */
-// @include tablet-up {
-  
-//   .wp-block-column:not(:first-child) {
-//     margin-left: 0;
-//   }
-// }
-
-.uagb-column__inner-wrap {
-	padding: 0 !important;
-}
-
 /**
  * Accordion Block
  */

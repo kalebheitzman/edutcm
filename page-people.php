@@ -1,6 +1,6 @@
 <?php
 /**
- * Template name: Faculty
+ * Template name: People
  *
  * @package Components
  * @since 1.0.0
@@ -8,23 +8,23 @@
 
 get_header();
 
-$faculty_args = array(
+$args = array(
 	'post_type'      => 'person',
 	'post_status'    => 'publish',
 	'posts_per_page' => -1,
 	'meta_key'       => 'person_last_name', // phpcs:ignore.
 	'orderby'        => 'meta_value',
 	'order'          => 'ASC',
-	'tax_query'      => array(
+	'tax_query'      => array( // phpcs:ignore
 		array(
 			'taxonomy' => 'person_category',
-			'field'    => 'slug',
-			'terms'    => 'faculty',
+			'field'    => 'id',
+			'terms'    => get_field( 'people_category', get_the_ID() ),
 		),
 	),
 );
 
-$loop = new WP_Query( $faculty_args );
+$loop = new WP_Query( $args );
 
 ?>
 
@@ -32,9 +32,9 @@ $loop = new WP_Query( $faculty_args );
 
 	<?php get_component( 'hero' ); ?>
 
-	<div class="no-sidebar-wrapper">
-		<section class="site-content full-width section-people">
+	<section class="sidebar-wrapper">
 
+		<div class="site-content section-people">
 			<?php
 			while ( $loop->have_posts() ) :
 				$loop->the_post();
@@ -43,8 +43,11 @@ $loop = new WP_Query( $faculty_args );
 
 			wp_reset_postdata();
 			?>
-		</section><!--.site-content-->
-	</div><!--.no-sidebar-wrapper-->
+		</div>
+
+		<?php get_component( 'sidebar-page' ); ?>
+
+	</section><!--.sidebar-wrapper-->
 
 </main><!--.site-main-->
 

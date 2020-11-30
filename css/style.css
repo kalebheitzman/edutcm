@@ -593,14 +593,17 @@ body {
 
 @media (min-width: 600px) {
   .page-template-page-left-sidebar .sidebar-wrapper,
-  .faq-template-default .sidebar-wrapper {
+  .faq-template-default .sidebar-wrapper,
+  .page-template-page-people .sidebar-wrapper {
     grid-template-columns: 1fr 3fr; }
     .page-template-page-left-sidebar .sidebar-wrapper .site-content,
-    .faq-template-default .sidebar-wrapper .site-content {
+    .faq-template-default .sidebar-wrapper .site-content,
+    .page-template-page-people .sidebar-wrapper .site-content {
       grid-row: 1;
       grid-column: 2; }
     .page-template-page-left-sidebar .sidebar-wrapper .secondary,
-    .faq-template-default .sidebar-wrapper .secondary {
+    .faq-template-default .sidebar-wrapper .secondary,
+    .page-template-page-people .sidebar-wrapper .secondary {
       grid-row: 1;
       grid-column: 1; } }
 
@@ -768,14 +771,17 @@ body {
 
 @media (min-width: 600px) {
   .page-template-page-left-sidebar .sidebar-wrapper,
-  .faq-template-default .sidebar-wrapper {
+  .faq-template-default .sidebar-wrapper,
+  .page-template-page-people .sidebar-wrapper {
     grid-template-columns: 1fr 3fr; }
     .page-template-page-left-sidebar .sidebar-wrapper .site-content,
-    .faq-template-default .sidebar-wrapper .site-content {
+    .faq-template-default .sidebar-wrapper .site-content,
+    .page-template-page-people .sidebar-wrapper .site-content {
       grid-row: 1;
       grid-column: 2; }
     .page-template-page-left-sidebar .sidebar-wrapper .secondary,
-    .faq-template-default .sidebar-wrapper .secondary {
+    .faq-template-default .sidebar-wrapper .secondary,
+    .page-template-page-people .sidebar-wrapper .secondary {
       grid-row: 1;
       grid-column: 1; } }
 
@@ -891,7 +897,6 @@ a {
   height: 100%;
   box-sizing: border-box;
   position: relative;
-  margin-bottom: 1rem;
   border-radius: 4px; }
   .block-grid-item .inner {
     padding: 2rem;
@@ -933,8 +938,6 @@ a {
 
 .grow .wp-block-lazyblock-grid-item {
   height: 100%; }
-  .grow .wp-block-lazyblock-grid-item .block-grid-item {
-    border-radius: 0; }
 
 /*
 CSS For Gutenberg Blocks
@@ -952,10 +955,6 @@ CSS For Gutenberg Blocks
     margin: 1.5rem calc( ( 767px - 920px ) / 2);
     max-width: 920px;
     width: 920px; } }
-
-/* columns */
-.uagb-column__inner-wrap {
-  padding: 0 !important; }
 
 /**
  * Accordion Block
@@ -1255,6 +1254,38 @@ a img.aligncenter {
         padding: 0; }
 
 /* hero banner */
+@media (max-width: 599px) {
+  .home .hero {
+    height: 60vh; } }
+
+@media (min-width: 600px) {
+  .home .hero {
+    height: 60vh; } }
+
+@media (min-width: 900px) {
+  .home .hero {
+    height: 60vh; } }
+
+@media (min-width: 1200px) {
+  .home .hero {
+    height: 69vh; } }
+
+@media (max-width: 599px) {
+  .home .hero img {
+    height: 60vh; } }
+
+@media (min-width: 600px) {
+  .home .hero img {
+    height: 60vh; } }
+
+@media (min-width: 900px) {
+  .home .hero img {
+    height: 60vh; } }
+
+@media (min-width: 1200px) {
+  .home .hero img {
+    height: 69vh; } }
+
 .hero {
   width: 100%;
   background: #333;
@@ -1271,7 +1302,7 @@ a img.aligncenter {
       height: 60vh; } }
   @media (min-width: 1200px) {
     .hero {
-      height: 69vh; } }
+      height: 60vh; } }
   .hero img {
     width: 100% !important;
     object-fit: cover;
@@ -1287,7 +1318,7 @@ a img.aligncenter {
         height: 60vh; } }
     @media (min-width: 1200px) {
       .hero img {
-        height: 69vh; } }
+        height: 60vh; } }
   .hero .outer {
     width: 100%;
     height: 100%;
@@ -1399,8 +1430,6 @@ a img.aligncenter {
   background: #114878;
   color: #fff;
   display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 2rem;
   border-radius: 4px; }
 
@@ -1408,43 +1437,66 @@ a img.aligncenter {
   display: grid; }
   @media (min-width: 600px) {
     .section-people {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       grid-gap: 2rem; } }
   .section-people .type-person {
-    background: #f7f7f7;
-    padding: 2rem;
+    border: 1px solid #eee;
     box-sizing: border-box;
     border-radius: 4px; }
+    .section-people .type-person .person-header {
+      display: grid;
+      grid-template-columns: 60px 1fr;
+      grid-column-gap: 1rem;
+      background: #f7f7f7;
+      padding: 1rem; }
     .section-people .type-person .person-image {
       display: flex;
       justify-content: center;
       align-items: center; }
       .section-people .type-person .person-image .person-bubble {
-        width: 100px;
-        height: 100px;
-        border-radius: 100px;
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
         background: #eee;
-        margin-bottom: 1rem; }
+        display: flex;
+        justify-content: center;
+        align-items: center; }
         .section-people .type-person .person-image .person-bubble img {
-          width: 100px;
-          height: 100px;
-          border-radius: 100px; }
+          width: 60px;
+          height: 60px;
+          border-radius: 60px;
+          padding-bottom: 0; }
+        .section-people .type-person .person-image .person-bubble span {
+          color: #aaa;
+          width: 60px;
+          height: 38px;
+          font-size: 2rem; }
+    .section-people .type-person .person-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
     .section-people .type-person .person-name {
+      margin: 0 0 0.25rem;
+      padding: 0;
+      widows: 3;
+      orphans: 3;
+      line-height: 1; }
+    .section-people .type-person .person-title {
+      font-weight: normal;
+      font-style: italic;
       margin: 0;
       padding: 0;
       widows: 3;
       orphans: 3;
-      text-align: center; }
-    .section-people .type-person .person-title {
-      font-weight: bold;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      widows: 3;
-      orphans: 3; }
+      line-height: 1.2; }
     .section-people .type-person .person-biography {
       widows: 3;
-      orphans: 3; }
+      orphans: 3;
+      grid-column: 1 / span 2;
+      padding: 1rem; }
+      .section-people .type-person .person-biography p {
+        padding: 0;
+        margin: 0; }
 
 /* post css */
 .post.sticky {

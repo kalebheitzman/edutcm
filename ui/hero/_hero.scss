@@ -1,4 +1,44 @@
 /* hero banner */
+
+.home {
+
+	.hero {
+
+		@include mobile {
+			height: $hero-mobile-height;
+		}
+	
+		@include tablet-up {
+			height: $hero-tablet-up-height;
+		}
+	
+		@include tablet-side {
+			height: $hero-tablet-side-height;
+		}
+	
+		@include desktop {
+			height: $hero-desktop-height;
+		}
+
+		img {	
+			@include mobile {
+				height: $hero-mobile-height;
+			}
+		
+			@include tablet-up {
+				height: $hero-tablet-up-height;
+			}
+		
+			@include tablet-side {
+				height: $hero-tablet-side-height;
+			}
+		
+			@include desktop {
+				height: $hero-desktop-height;
+			}
+		}
+	}
+}
 .hero {
   width: 100%;
   background: #333;
@@ -6,19 +46,19 @@
   margin-bottom: 2rem;
 
   @include mobile {
-    height: $hero-mobile-height;
+    height: $hero-mobile-height-secondary;
   }
 
   @include tablet-up {
-    height: $hero-tablet-up-height;
+    height: $hero-tablet-up-height-secondary;
   }
 
   @include tablet-side {
-    height: $hero-tablet-side-height;
+    height: $hero-tablet-side-height-secondary;
   }
 
   @include desktop {
-    height: $hero-desktop-height;
+    height: $hero-desktop-height-secondary;
   }
 
   img {
@@ -27,19 +67,19 @@
     animation: fadeIn ease 300ms;
 
     @include mobile {
-      height: $hero-mobile-height;
+      height: $hero-mobile-height-secondary;
     }
   
     @include tablet-up {
-      height: $hero-tablet-up-height;
+      height: $hero-tablet-up-height-secondary;
     }
   
     @include tablet-side {
-      height: $hero-tablet-side-height;
+      height: $hero-tablet-side-height-secondary;
     }
   
     @include desktop {
-      height: $hero-desktop-height;
+      height: $hero-desktop-height-secondary;
     }
   }
 

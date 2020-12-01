@@ -32,6 +32,7 @@ require $template_directory . '/inc/taxonomies/resource-category.php';
 /**
  * Register shortcodes.
  */
+require $template_directory . '/inc/shortcodes/masonry.php';
 require $template_directory . '/inc/shortcodes/resources.php';
 
 /**

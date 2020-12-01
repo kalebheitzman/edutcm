@@ -1341,6 +1341,60 @@ a img.aligncenter {
   100% {
     opacity: 1; } }
 
+.masonry-wrapper {
+  padding: 0 0.5rem; }
+  .masonry-wrapper .masonry {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap; }
+    .masonry-wrapper .masonry:after {
+      content: '';
+      flex-grow: 999999999;
+      min-width: 200px;
+      height: 0; }
+    .masonry-wrapper .masonry > * {
+      position: relative;
+      display: block;
+      height: 250px;
+      margin: 0.5rem;
+      flex-grow: 1; }
+      .masonry-wrapper .masonry > * > img {
+        height: 250px;
+        object-fit: cover;
+        max-width: 100%;
+        min-width: 100%;
+        vertical-align: bottom;
+        border-radius: 4px; }
+    .masonry-wrapper .masonry .masonry-item {
+      background: #ddd;
+      min-width: 300px; }
+      .masonry-wrapper .masonry .masonry-item:hover .masonry-overlay {
+        background: transparent; }
+        .masonry-wrapper .masonry .masonry-item:hover .masonry-overlay .masonry-overlay-inner h3 {
+          background: #114878; }
+      .masonry-wrapper .masonry .masonry-item .masonry-overlay {
+        background: #114878;
+        background: linear-gradient(55deg, rgba(17, 72, 120, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        box-sizing: border-box;
+        display: flex;
+        align-items: flex-end;
+        border-radius: 4px;
+        color: #fff;
+        text-decoration: none;
+        transition: all 85ms ease-out; }
+        .masonry-wrapper .masonry .masonry-item .masonry-overlay .masonry-overlay-inner h3 {
+          transition: all 85ms ease-out;
+          background: rgba(17, 72, 120, 0.8);
+          padding: 0.25rem 2rem;
+          line-height: 1.4;
+          margin: 0 0 0 -2rem; }
+
 .page-menu ul {
   list-style: none;
   margin: 0;

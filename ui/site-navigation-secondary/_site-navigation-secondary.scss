@@ -1,12 +1,29 @@
 /* global secondary nav menu styles */
 .site-navigation-secondary {
-  display: none;
+	display: none;
+	grid-area: secondary-navigation;
 
   @include tablet-up {
-    display: block;
+		display: block;
+		background: #eee;
   }
 
   .site-secondary-menu {
+		display: flex;
+		justify-content: flex-end;
+		
+		@include tablet-up {
+			margin: 0 auto;
+			width: $content-tablet-up;
+		}
+	
+		@include tablet-side {
+			width: $content-tablet-side;
+		}
+		
+		@include desktop {
+			width: $content-desktop;
+		}
 
   }
 

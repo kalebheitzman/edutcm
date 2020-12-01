@@ -1,9 +1,9 @@
 <div class="site-navigation-search-box" data-show-search="false">
-  <div class="content">
+	<div class="content">
 
-    <?php get_search_form(); ?>
+		<?php get_search_form(); ?>
 
-    <?php get_component( 'sidebar-search' ); ?>
+		<?php get_component( 'sidebar-search' ); ?>
 
-  </div><!--.content-->
+	</div><!--.content-->
 </div><!--/site-navigation-search-box-->

@@ -1,26 +1,31 @@
+.admin-bar {
+	.site-navigation-search-box {
+		top: calc( 96px + 32px );
+
+		@include tablet-up {
+			height: calc(100vh - 96px - 32px);
+			margin-bottom: calc(-100vh + 96px + 32px);
+		}	
+	}
+}
+
 .site-navigation-search-box {
-  background: #1474b4;
+  background: rgba(17,72,120,0.9);
   padding: 2rem;
   color: #fff;
   box-sizing: border-box;
   transition: ease-in-out 350ms all;
   z-index: 400;
   display: none;
-  position: absolute;
+  position: sticky;
   width: 100%;
-  height: $hero-mobile-height;
+	height: $hero-mobile-height;
+	top: 96px;
+	backdrop-filter: blur(10px);
 
   @include tablet-up {
-    height: $hero-tablet-up-height;
-
-  }
-
-  @include tablet-side {
-    height: $hero-tablet-side-height;
-  }
-
-  @include desktop {
-    height: $hero-desktop-height;
+		height: calc(100vh - 96px);
+		margin-bottom: calc(-100vh + 96px);
   }
   
   &[data-show-search="true"] {

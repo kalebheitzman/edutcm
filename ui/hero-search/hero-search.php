@@ -12,7 +12,7 @@
 
 	<div class="outer">
 		<div class="inner">
- 
+
 			<h1><?php the_title(); ?></h1>
 			<form>
 				<input type="text" placeholder="What would you like to learn more about? ..." name="s" autofocus />

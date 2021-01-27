@@ -37,7 +37,8 @@
 			&:hover {
 
 				.masonry-overlay {
-					background: transparent;
+					background: rgb(17,72,120);
+					background: linear-gradient(55deg, rgba(17,72,120,0.4) 0%, rgba(0,0,0,0) 100%);    
 
 					.masonry-overlay-inner {
 

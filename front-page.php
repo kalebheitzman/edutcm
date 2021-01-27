@@ -10,7 +10,7 @@ get_header(); ?>
 
 <main class="site-main">
 
-  <?php get_component( 'hero' ); ?>
+	<?php get_component( 'hero-search' ); ?>
 
 	<?php
 	if ( have_posts() ) :
